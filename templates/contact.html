@@ -1,0 +1,71 @@
+<!-- extends base.html file for implemenation -->
+{% extends "base.html" %}
+
+{% block style %}
+
+@media (min-width: 768px) {
+    body{overflow: hidden}
+}
+
+
+{% endblock %}
+
+<!-- this block will be placed with base.html file in same block -->
+{% block contents %}
+    <section class="contact-row" style="background-color: rgba(249, 201, 71, 0.701);">
+        <div class="container mt-3, mb-3 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-11">
+            <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-2">
+                <div class="row justify-content-center ">
+                    <div class="col-md-10  align-content-center col-lg-6 col-xl-5 order-2 order-lg-1 mt5">
+    
+                    <p class="text-center custom-color custom-title h1 fw-bold mb-5 mx-1 mx-md-4 mt-5">Contact Us</p>
+    
+                    <form class="mx-1 mx-md-4" method="POST">
+    
+                        <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-info-circle fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <input type="text" id="form3Example3" name="subject" class="form-control" required />
+                            <label class="form-label" for="form3Example3">Subject</label>
+                        </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <textarea class="form-control" name="msg"  id="textAreaExample3" rows="6" required></textarea>
+                            <label class="form-label"  for="textAreaExample3">Message</label>
+                        </div>
+                        </div>
+    
+                        <div class="d-flex mb-3 ">
+                        <button type="submit" class="btn btn-warning btn-lg ms-auto m">Send Us Message</button>
+                        </div>
+                        <!-- displaying error or success mesages -->
+                        {% for cat, msg in get_flashed_messages(with_categories=true) %}
+                            <div class="alert alert-{{cat}} ms-5" role="alert" style="text-align:center">
+                                
+                                <P> <i class="fas fa-info-circle"></i> &nbsp; {{ msg }} </P>
+                            </div>
+                        {% endfor %}
+                        
+                    </form>
+    
+                    </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+    
+                    <img src="../../static/images/contact-bg.jpg"
+                        class="img-fluid" alt="Sample image">
+    
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+{% endblock %}

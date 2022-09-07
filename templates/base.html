@@ -1,0 +1,220 @@
+<!-- developed by: Samiulhaq Chardiwall -->
+<!-- LinkedIn: https://www.linkedin.com/in/chardiwall/ -->
+<!-- start time: 19/july/2022 -->
+<!-- end time:  -->
+
+<!-- Document Name: base.html -->
+<!-- for: main.py -->
+<!-- Application Name: Medical Care Final Year Project -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care</title>
+    <link rel="icon" href="../../static/images/logo.png" type ="image/icon type">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet">
+
+
+    
+
+    <!-- Local css -->
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <link rel="stylesheet" href="/static/styles/drag-drop.css">
+
+    <style>
+
+        body{background-color: #fffbdd1d;}
+        {% block style %}
+        {% endblock %}
+    </style>
+    
+    
+</head>
+<body >
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-4" href="{{ url_for('main.index') }}">
+            <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            width="50"
+            alt="App Logo"
+            loading="lazy"
+        />
+            <i class="fas custom-title">Medical Care</i>
+        </a>
+    
+        <!-- Toggle button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarButtonsExample"
+            aria-controls="navbarButtonsExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse nav-menu navbar-collapse" id="navbarButtonsExample">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.index') }}">
+                        <i class="fas custom-title">Home</i>
+                    </a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.about') }}">
+                    <i class="fas custom-title">About Us</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.contact') }}">
+                    <i class="fas custom-title">Contact Us</i>
+                </a>
+            </li>
+            </ul>
+            <!-- Left links -->
+            {% if not user %}
+                <div class="d-flex align-items-center">
+                    <a href="{{ url_for('auth.login') }}">
+                        <button type="button" class="btn text-warning btn-link px-3 me-2">
+                            Login
+                        </button>
+                    </a>
+
+                    <a href="{{ url_for('auth.signup') }}">
+                        <button type="button" class="btn btn-warning me-3">
+                            Sign up
+                        </button>
+                    </a>
+            
+            {% else %}
+                <a>
+                    <button type="button" class="btn text-warning btn-link px-3 me-2">
+                        {{ user }}
+                    </button>
+                </a>
+
+                <a href="{{ url_for('auth.session_logout') }}">
+                    <button type="button" class="btn btn-warning me-3">
+                        Logout
+                    </button>
+                </a>
+            {% endif %}
+        </div>
+
+        </div>
+        <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    
+    {% block contents %}
+    {% endblock %}
+    
+    <!-- footer  -->
+    <footer class="footer-ctr text-center text-white">
+        <!-- Grid container -->
+        <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-0">
+            <!-- Facebook -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://ms-my.facebook.com/people/Usama-Khawreen/100007863524720/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f fa-2x"></i
+            ></a>
+    
+            <!-- Twitter -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://twitter.com/khawreenusama?s=11&t=XteBSvAd6LWlBmaxJhnJDQ"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+    
+            <!-- Google -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="mailto::khwarin2@gmail.com"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google fa-2x"></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.instagram.com/khawreen2/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://www.linkedin.com/in/chardiwall/"
+                role="button"
+                data-mdb-ripple-color="dark"
+            > <i class="fab fa-linkedin fa-2x"></i
+            ></a>
+            <!-- Github -->
+            <a  class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://github.com/chardiwall"
+                role="button"
+                data-mdb-ripple-color="dark">
+                    <i class="fab fa-github fa-2x"></i>
+            </a>
+        </section>
+        <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+
+    <!-- Local Script -->
+    <script src="/static/js/particles.js"></script>
+    <script src="/static/js/drag-drop.js"></script>
+
+    <script>
+        TESTER = document.getElementById('tester');
+        Plotly.newPlot( TESTER, {{figGraph | safe }}, {
+            margin: { t: 0 } } );
+    </script>
+</body>
+
+</body>
+</html>

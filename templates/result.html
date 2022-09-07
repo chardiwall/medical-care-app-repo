@@ -1,0 +1,23 @@
+<!-- extends base.html file for implemenation -->
+{% extends "base.html" %}
+
+<!-- this block will be placed with base.html file in same block -->
+{% block contents %}
+
+    <div class="result-header mb-5 d-flex flex-row align-items-center justify-content-center justify-content-lg-center">
+    </div>
+
+    <h1 class="text-center mt-3 auth-header text-warning">Results</h1>
+    <hr class="divider-horizontal-blurry" />
+
+    <h6 class="auth-header text-center">
+        <a class="text-muted" href="{{ url_for('main.index') }}">Back To Home Page</a>
+    </h6>
+
+    <h3 class="mt-5 ms-5 auth-header"> The image is classified as <span style="font-size:1.5rem;" class="auth-header text-muted">{{ predicted_class }}<span></h3>
+
+    <div id="tester" style="width:90vw; height: 90vh;"></div>
+
+</html>
+
+{% endblock %}

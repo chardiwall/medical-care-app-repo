@@ -1,0 +1,57 @@
+<!-- developed by: Samiulhaq Chardiwall -->
+<!-- LinkedIn: https://www.linkedin.com/in/chardiwall/ -->
+<!-- start time: 19/july/2022 -->
+<!-- end time: 25/july/2022 -->
+
+<!-- Document Name: base.html -->
+<!-- for: auth.py -->
+<!-- Application Name: Medical Care Final Year Project -->
+
+
+<!-- base html page for login sign up and reset password page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care Authentication</title>
+    <link rel="icon" href="../../static/images/logo.png" type ="image/icon type">
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Local Style sheet -->
+    <link rel="stylesheet" href="../../static/styles/styles.css">
+
+    <style>
+        {% block style %}
+        
+        {% endblock %}
+    </style>
+
+</head>
+<body>
+    <div class="auth-container">
+        <!-- this block will be replaced with login.html logout.html reset-password.html -->
+        {% block content %}
+            
+        {% endblock %}
+    </div>
+
+    <!-- MDB -->
+    <script
+    type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+</html>

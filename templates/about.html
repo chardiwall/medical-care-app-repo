@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+    
+{% block style %}
+    .row{width: 100vw; ; margin:0px; align-items: center;}
+    @media screen and  (max-width: 768px) {
+        div .row-cols-md-2{height: 100%;}     
+    }
+
+    @media (min-width: 768px) and (min-height: 700px){
+        body{overflow: hidden}
+    }
+    
+{% endblock %}
+
+{% block contents %}
+<div  class="about-ctr d-flex justify-content-center">
+    <div class="about-row  d-flex row row-cols-1 row-cols-md-2">
+        <div class="col">
+            <div class="card">
+                <img src="../static/images/sami.JPG" class="card-img-top" alt="Samiulhaq Chardiwall"/>
+                <div class="card-body">
+                    <h4 class="card-title">Samiulhaq Chardiwall</h4>
+                    <p class="card-text">
+                        Machine Learning Engineer
+                    </p>
+                    <section class="mb-0">
+                        <!-- Google -->
+                        <a
+                            class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href="mailto:samiulhaq513@gmail.com"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-google fa-2x"></i>
+                        </a>
+                
+                        <!-- Linkedin -->
+                        <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href="https://www.linkedin.com/in/chardiwall/"
+                            role="button"
+                            data-mdb-ripple-color="dark"> <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+
+                        <!-- Github -->
+                        <a  class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href="https://github.com/chardiwall"
+                            role="button"
+                            data-mdb-ripple-color="dark">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="col usama">
+            <div class="card">
+                <img src="../static/images/Usam.jpg" class="card-img-top" alt="Usama Khawreen"/>
+                <div class="card-body">
+                    <h4 class="card-title">Usama Khawreen</h4>
+                    <p class="card-text">
+                        Data Scientist
+                    </p>
+                    <section class="mb-0">
+                        <!-- Google -->
+                        <a
+                            class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href=""
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-google fa-2x"></i>
+                        </a>
+                
+                        <!-- Linkedin -->
+                        <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href="https://www.linkedin.com/in/usama-khawreen-41099a227/"
+                            role="button"
+                            data-mdb-ripple-color="dark">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+
+                        <!-- Github -->
+                        <a  class="btn btn-link btn-floating btn-lg text-dark m-1"
+                            href="https://github.com/UsamaKhawreen"
+                            role="button"
+                            data-mdb-ripple-color="dark">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+
+    
+{% endblock %}
+
+
+{% block contents %}
+    <div class="bg-image">
+
+    </div>
+    <div class="index-header mb-5 d-flex flex-row align-items-center justify-content-center justify-content-lg-center">
+        <img class="main-logo" src="../static/images/main-logo.png" alt="medical care app">
+        <div id="particles"></div>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <div class="container-scroll">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text">Scroll down</span>
+        </div>
+    </div>
+
+    <hr class="divider-horizontal-blurry mt-5" />
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="d-flex align-content-center mt-0 flex-wrap">
+            <div class="col index-col">
+                <div class="d-flex row align-content-center">
+                    <h3 class="text-center mt-5 card-title custom-color">Upload Image</h3>
+                <hr class="divider-horizontal-blurry" />
+
+                <div class="file-upload p-4" >              
+                    <div class="image-upload-wrap mt-5">
+                        <input  class="file-upload-input" name="img" type='file' onchange="readURL(this);" accept="image/jpeg, image/jpg" />
+                    
+                        <div class="drag-text">
+                            <h3>Drag and drop a file or select add Image</h3>
+                        </div>
+                    </div>
+
+                    <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                        
+                        <div class="d-flex mt-2 justify-content-center bd-highlight">
+                            <button type="button" onclick="removeUpload()" class="btn btn-danger">Remove <span class="image-title">Uploaded Image</span></button>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-center bd-highlight">
+                            <button type ="submit" class="btn btn-warning"> Diagnose Image</button>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center bd-highlight bd-highlight">
+                        <button class="btn mt-5 btn-warning file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                    </div>
+                </div>
+                </div>
+            
+            </div>
+
+        <div class="col index-col" >
+            <div class="d-flex row align-content-center">
+                <h3 class="text-center mt-5 card-title custom-color">System Info</h3>
+                <hr class="divider-horizontal-blurry" />
+                
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-mdb-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../static/images/class-report.png" class="d-block" alt="Wild Landscape"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/cf-matrix.png" class="d-block w-100" alt="Camera"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/acuracy.png" class="d-block" alt="Exotic Fruits"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/loss.png" class="d-block" alt="Exotic Fruits"/>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        <!-- End of column -->
+        </div>
+        <!-- End of both columns -->
+        </div>
+
+        <hr class="divider-horizontal-blurry mt-5" />
+
+        <div class="cat-container container mt-5 mb-5">
+            <div class="row justify-content-center">
+                    <h3 class="text-center mt-5 card-title custom-color">Categories</h3>
+                    <hr class="divider-horizontal-blurry" />
+
+                    <div id="carouselMultiItemExample"
+                        class="carousel slide carousel-dark text-center"
+                        data-mdb-ride="carousel" >
+                        <!-- Controls -->
+                        <div class="d-flex justify-content-center mb-4">
+                            <button
+                                class="carousel-control-prev position-relative"
+                                type="button"
+                                data-mdb-target="#carouselMultiItemExample"
+                                data-mdb-slide="prev"
+                                >
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+
+                            <button
+                                class="carousel-control-next position-relative"
+                                type="button"
+                                data-mdb-target="#carouselMultiItemExample"
+                                data-mdb-slide="next"
+                                >
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                        <!-- Inner -->
+                        <div class="carousel-inner py-4">
+                            <!-- Single item -->
+                            <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="img-card card">
+                                    <img
+                                        src="../static/images/ak.jpeg"
+                                        class="card-img-top"
+                                        alt="Actinic keratosis"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Actinic keratosis</h5>
+                                
+                                        <a href="https://www.skincancer.org/skin-cancer-information/actinic-keratosis/" class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/bcc.jpeg"
+                                        class="card-img-top"
+                                        alt="Basal cell carcinoma"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Basal cell carcinoma</h5>
+                                        <a href="https://www.skincancer.org/skin-cancer-information/basal-cell-carcinoma/" class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/bkl.jpeg"
+                                        class="card-img-top"
+                                        alt="Benign keratosis-like lesions"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Benign keratosis-like lesions</h5>
+                                        <a href="https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878#:~:text=A%20seborrheic%20keratosis%20(seb%2Do,or%20scaly%20and%20slightly%20raised." 
+                                            class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/df.jpeg"
+                                        class="card-img-top"
+                                        alt="Dermatofibroma (df)"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dermatofibroma</h5>
+                                        <a href="https://www.skinsight.com/skin-conditions/adult/dermatofibroma#:~:text=Dermatofibromas%2C%20or%20histiocytomas%2C%20are%20common,depressed%20scars%20after%20several%20years."
+                                            class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/mel.jpg"
+                                        class="card-img-top"
+                                        alt="Melanoma (mel)"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Melanoma </h5>
+                                        
+                                        <a href="https://www.mayoclinic.org/diseases-conditions/melanoma/symptoms-causes/syc-20374884" class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/nv.jpeg"
+                                        class="card-img-top"
+                                        alt="Hot Air Balloons"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Melanocytic nevi</h5>
+                                        
+                                        <a href="https://emedicine.medscape.com/article/1058445-overview#:~:text=Melanocytic%20nevi%20represent%20proliferations%20of,to%20sun%20(ultraviolet)%20exposure." class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/scc.jpeg"
+                                        class="card-img-top"
+                                        alt="Squamous cell carcinoma"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Squamous cell carcinoma</h5>
+                                        
+                                        <a href="https://www.mayoclinic.org/diseases-conditions/squamous-cell-carcinoma/symptoms-causes/syc-20352480" class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                    <div class="card">
+                                    <img
+                                        src="../static/images/vasc.jpeg"
+                                        class="card-img-top"
+                                        alt="Vascular lesions"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vascular lesions</h5>
+                                        
+                                        <a href="https://www.ssmhealth.com/cardinal-glennon/pediatric-plastic-reconstructive-surgery/hemangiomas" class="btn btn-warning">See More...</a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Inner -->
+                </div>
+                <!-- Carousel wrapper -->
+            </div>
+            </div>
+    </form>
+{% endblock %}
